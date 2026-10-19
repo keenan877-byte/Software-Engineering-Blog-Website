@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My CV | Home</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="avatar" aria-hidden="true">👤</div>
+      <div>
+        <div class="brand-name">Keenan Alexander</div>
+        <div class="brand-role">AI Full Stack Development Student</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html" class="nav-link is-active" data-active="home">Home</a>
+      <a href="cv.html" class="nav-link" data-active="cv">CV</a>
+      <a href="contact.html" class="nav-link" data-active="contact">Contact</a>
+    </nav>
+
+    <div class="actions">
+      <button class="btn btn-ghost" id="themeToggle" type="button" aria-label="Toggle theme">
+        🌗 Theme
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>Hi! I’m Keenan Alexander.</h1>
+        <p class="lead">
+          Welcome to my AI Full Stack development CV website. Explore my experience, projects,
+          and reach out via the contact form.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn" href="cv.html">View CV</a>
+          <button class="btn btn-ghost" id="openContactBtn" type="button">Quick Contact</button>
+        </div>
+
+        <div class="stat-row" aria-label="Highlights">
+          <div class="stat">
+            <div class="stat-num" id="statYear">0</div>
+            <div class="stat-label">Years learning</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" id="statProjects">0</div>
+            <div class="stat-label">Projects built</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" id="statSkills">0</div>
+            <div class="stat-label">Core skills</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="Profile card">
+        <h2 class="card-title">Profile</h2>
+        <ul class="card-list">
+          <li><strong>Location:</strong> Memphis, Tennessee</li>
+          <li><strong>Email:</strong> Keenan877@gmail.com</li>
+          <li><strong>Focus:</strong> Frontend + Backend + AI features</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <p class="muted">
+            I am an AI Full Stack development student based in Memphis, Tennessee.
+            I focus on building frontend, backend, and AI-powered features.          Tip: Use the theme toggle button to switch modes. The theme is saved automatically.
+        </p>
+      </aside>
+    </section>
+
+    <section class="grid">
+      <article class="panel">
+        <h3>What you’ll find</h3>
+        <ul class="checklist">
+          <li>CV sections with interactive filtering</li>
+          <li>Project list you can download as text</li>
+          <li>Contact modal with validation</li>
+        </ul>
+      </article>
+
+      <article class="panel">
+        <h3>Curriculum snapshot</h3>
+        <p class="muted">This page is a landing page; dynamic parts are powered by JavaScript.</p>
+        <div class="tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">DOM</span>
+          <span class="tag">localStorage</span>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Modal (used by index page quick contact) -->
+  <div class="modal-backdrop" id="contactBackdrop" hidden></div>
+  <div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle" hidden>
+    <div class="modal-header">
+      <h2 id="contactModalTitle">Quick Contact</h2>
+      <button class="icon-btn" id="closeContactBtn" type="button" aria-label="Close">✕</button>
+    </div>
+
+    <form id="quickContactForm" class="modal-body">
+      <label>
+        Name
+        <input type="text" name="name" id="qcName" required minlength="2" />
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" id="qcEmail" required />
+      </label>
+
+      <label>
+        Message
+        <textarea name="message" id="qcMessage" required minlength="5"></textarea>
+      </label>
+
+      <div class="form-row">
+        <button class="btn" type="submit">Send</button>
+        <div class="muted" id="qcStatus" aria-live="polite"></div>
+      </div>
+    </form>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

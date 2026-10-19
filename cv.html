@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My CV | CV</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="avatar" aria-hidden="true">📄</div>
+      <div>
+        <div class="brand-name">Keenan Alexander</div>
+        <div class="brand-role">Curriculum Vitae</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html" class="nav-link" data-active="home">Home</a>
+      <a href="cv.html" class="nav-link is-active" data-active="cv">CV</a>
+      <a href="contact.html" class="nav-link" data-active="contact">Contact</a>
+    </nav>
+
+    <div class="actions">
+      <a class="btn btn-ghost" href="contact.html">Contact Me</a>
+    </div>
+
+    <div class="actions">
+      <button class="btn btn-ghost" id="themeToggle" type="button" aria-label="Toggle theme">
+        🌗 Theme
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-head">
+      <div>
+        <h1>CV & Projects</h1>
+        <p class="muted">
+          Filter sections and download your projects as a text file (generated client-side).
+        </p>
+      </div>
+
+      <div class="controls">
+        <label class="control">
+          Filter:
+          <select id="sectionFilter">
+            <option value="all" selected>All</option>
+            <option value="experience">Experience</option>
+            <option value="projects">Projects</option>
+            <option value="skills">Skills</option>
+            <option value="education">Education</option>
+          </select>
+        </label>
+
+        <button class="btn" id="downloadProjectsBtn" type="button">Download Projects</button>
+      </div>
+    </section>
+
+<section class="cv" aria-label="CV Content">
+<div class="cv-block" data-section="experience">
+    <h2>Experience</h2>
+    <div class="item">
+    <div class="item-title">Student Developer (AI Full Stack) — Keenan Alexander</div>
+    <div class="item-meta">2024 — Present</div>
+        <p class="muted">
+        Built dynamic web interfaces with HTML, CSS, and JavaScript. Implemented DOM-based interactions
+        (filtering, modals, validation) and used client-side storage patterns to improve user experience.
+        </p>
+    </div>
+
+  <div class="item">
+    <div class="item-title">AI Learning Lab Assistant (Peer Support)</div>
+    <div class="item-meta">2024 — Present</div>
+    <p class="muted">
+      Assisted peers with JavaScript fundamentals—events, form handling, and interactive UI logic—
+      while reviewing project organization and code readability.
+    </p>
+  </div>
+</div>
+
+
+<div class="cv-block" data-section="projects">
+  <h2>Projects</h2>
+
+  <div class="item project" data-project>
+    <div class="item-title">AI Prompt Playground</div>
+    <div class="item-meta">UI/UX • JavaScript • localStorage</div>
+    <p class="muted">
+      A prompt management interface with interactive filtering and saved history for quick reuse.
+    </p>
+  </div>
+
+  <div class="item project" data-project>
+    <div class="item-title">Portfolio Generator</div>
+    <div class="item-meta">HTML • CSS • DOM • Export</div>
+    <p class="muted">
+      Form-driven project summaries with live previews and a download feature for easy sharing.
+    </p>
+  </div>
+
+  <div class="item project" data-project>
+    <div class="item-title">Mini Analytics Dashboard</div>
+    <div class="item-meta">Interactive UI • Web patterns • JS</div>
+    <p class="muted">
+      A dashboard-style layout demonstrating interactive controls and data presentation concepts.
+    </p>
+  </div>
+</div>
+
+
+      <div class="cv-block" data-section="skills">
+        <h2>Skills</h2>
+        <div class="tags" id="skillsTags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">DOM</span>
+          <span class="tag">localStorage</span>
+          <span class="tag">Responsive Design</span>
+          <span class="tag">Accessibility Basics</span>
+        </div>
+      </div>
+
+      <div class="cv-block" data-section="education">
+        <h2>Education</h2>
+        <div class="item">
+        <div class="item-title">AI Full Stack Development — Course Program</div>
+        <div class="item-meta">Ongoing</div>
+        <p class="muted">
+        Training focused on full-stack web development foundations: structured HTML, responsive CSS,
+         and JavaScript-driven functionality for real user interactions.
+        </p>
+        </div>
+    </div>
+
+
+      <div class="empty-state" id="emptyState" hidden>
+        No sections match your filter.
+      </div>
+    </section>
+
+    <section class="note">
+      <h3>Design Process (short)</h3>
+      <p class="muted">
+        I planned the UI structure first (layout + navigation), then added JavaScript for interactivity:
+        filtering content, downloading generated output, and validating contact forms.
+      </p>
+    </section>
+  </main>
+
+  <script src="cv.js"></script>
+</body>
+</html>
